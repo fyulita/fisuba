@@ -24,8 +24,7 @@ pipenv install
 
 ```
 cd fisuba
-python manage.py migrate
 python manage.py runserver
 ```
 
-Luego de ejecutar este último comando van a poder visitar la página en https://localhost:8000.
+Luego de ejecutar este último comando van a poder visitar la página en https://127.0.0.1:8000.
