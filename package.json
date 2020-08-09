@@ -1,0 +1,35 @@
+{
+  "name": "fisuba",
+  "version": "1.0.0",
+  "description": "Página web con material de la carrera de Lic. en Ciencias Físicas de la Universidad de Buenos Aires.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./fisuba/frontend/src/index.js --output ./fisuba/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./fisuba/frontend/src/index.js --output ./fisuba/frontend/static/frontend/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fyulita/fisuba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fyulita/fisuba/issues"
+  },
+  "homepage": "https://github.com/fyulita/fisuba#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

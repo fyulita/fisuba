@@ -3,6 +3,8 @@
 
 Página web con material de la carrera de Lic. en Ciencias Físicas de la Universidad de Buenos Aires.
 
+- [Board de Trello](https://trello.com/b/bifiKAUS/fisuba)
+
 ## Instalación
 
 1. Clonamos el repositorio de GitHub:
@@ -20,7 +22,7 @@ pipenv shell
 pipenv install
 ```
 
-3. Corremos la página:
+3. Corremos la página (Asegurarse de tener los puertos 8000 y 5432 disponibles):
 
 ```
 cd fisuba
