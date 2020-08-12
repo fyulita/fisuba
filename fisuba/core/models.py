@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MaxValueValidator, MinValueValidator
 
 
 class Materias(models.Model):
@@ -22,6 +23,60 @@ class Materias(models.Model):
     departamento = models.CharField(max_length=4, choices=DEPARTAMENTO_CHOICES)
     experimental = models.BooleanField()
 
+    def __str__(self):
+        return self.nombre
+
+
+class Guias(models.Model):
+    CUATRIMESTRE_OPTIONS = [
+        (0, "Verano"),
+        (1, "Primer Cuatrimestre"),
+        (2, "Segundo Cuatrimestre")
+    ]
+
+    materia = models.ForeignKey(Materias, on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=100, blank=True)
+    numero = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(20)])
+    anio = models.IntegerField(validators=[MinValueValidator(2010), MaxValueValidator(2050)])
+    cuatrimestre = models.IntegerField(choices=CUATRIMESTRE_OPTIONS)
 
     def __str__(self):
         return self.nombre
+
+
+class Examenes(models.Model):
+    CUATRIMESTRE_OPTIONS = [
+        (0, "Verano"),
+        (1, "Primer Cuatrimestre"),
+        (2, "Segundo Cuatrimestre")
+    ]
+
+    TIPO_OPTIONS = [
+        ("P1", "Primer Parcial"),
+        ("P2", "Segundo Parcial"),
+        ("P3", "Tercer Parcial"),
+        ("R1", "Primer Recuperatorio"),
+        ("R2", "Segundo Recuperatorio"),
+        ("R3", "Tercer Recuperatorio"),
+        ("F", "Final")
+    ]
+
+    materia = models.ForeignKey(Materias, on_delete=models.CASCADE)
+    TIPO = models.CharField(max_length=2, choices=TIPO_OPTIONS)
+    anio = models.IntegerField(validators=[MinValueValidator(2010), MaxValueValidator(2050)])
+    cuatrimestre = models.IntegerField(choices=CUATRIMESTRE_OPTIONS)
+
+    def __str__(self):
+        return (str(self.anio) + ' ' + str(self.cuatrimestre))
+
+
+class EjerciciosGuias(models.Model):
+    guia = models.ForeignKey(Guias, on_delete=models.CASCADE)
+    numero = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+    inciso = models.CharField(max_length=10, blank=True)
+
+
+class EjerciciosExamenes(models.Model):
+    examen = models.ForeignKey(Examenes, on_delete=models.CASCADE)
+    numero = models.IntegerField(validators=[MinValueValidator(0), MaxValueValidator(100)])
+    inciso = models.CharField(max_length=10, blank=True)
