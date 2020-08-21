@@ -4,7 +4,7 @@ import React from 'react';
 export class Header extends React.Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-sm navbar-primary bg-primary">
+            <nav className="navbar navbar-expand-sm navbar-dark bg-primary">
                 <a className="navbar-brand" href="#">FISUBA</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
