@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export class Header extends Component {
+
+export class Header extends React.Component {
     render() {
         return (
             <nav className="navbar navbar-expand-sm navbar-primary bg-primary">
@@ -32,4 +33,4 @@ export class Header extends Component {
     }
 }
 
-export default Header
+export default Header;
