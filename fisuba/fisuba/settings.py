@@ -17,6 +17,9 @@ import django_heroku
 django_heroku.settings(locals())
 
 
+import os
+
+
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -81,7 +84,7 @@ WSGI_APPLICATION = 'fisuba.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
-import os
+
 import psycopg2
 
 
