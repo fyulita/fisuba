@@ -17,10 +17,10 @@ import django_heroku
 django_heroku.settings(locals())
 
 
-import os
+from pathlib import Path
 
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -85,6 +85,7 @@ WSGI_APPLICATION = 'fisuba.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 
+import os
 import psycopg2
 
 
