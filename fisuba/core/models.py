@@ -54,11 +54,10 @@ class Examenes(models.Model):
     TIPO_OPTIONS = [
         ("P1", "Primer Parcial"),
         ("P2", "Segundo Parcial"),
-        ("P3", "Tercer Parcial"),
         ("R1", "Primer Recuperatorio"),
         ("R2", "Segundo Recuperatorio"),
-        ("R3", "Tercer Recuperatorio"),
-        ("F", "Final")
+        ("F", "Final"),
+        ("O", "Otro")
     ]
 
     materia = models.ForeignKey(Materias, on_delete=models.CASCADE)
