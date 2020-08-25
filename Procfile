@@ -1,1 +1,1 @@
-web: gunicorn fisuba.wsgi:application
+web: gunicorn fisuba.wsgi
