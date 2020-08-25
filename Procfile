@@ -1,1 +1,1 @@
-web: gunicorn fisuba:app
+web: gunicorn fisuba.wsgi --log-file -
