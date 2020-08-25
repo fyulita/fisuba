@@ -1,6 +1,8 @@
-# [FisUBA](fisuba.herokuapp.com)
+# FisUBA
 
-Página web con material de la carrera de Lic. en Ciencias Físicas de la Universidad de Buenos Aires. Esta página usa Django REST Framework en el backend para la API y usa React.js en el frontend.
+#### [fisuba.herokuapp.com](fisuba.herokuapp.com)
+
+FisUBA es una página web con material de la carrera de Lic. en Ciencias Físicas de la Universidad de Buenos Aires. Esta página usa Django REST Framework en el backend para la API y usa React.js en el frontend.
 
 - [Board de Trello](https://trello.com/b/bifiKAUS/fisuba)
 

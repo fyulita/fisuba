@@ -30,30 +30,60 @@ export class Materias extends Component {
 
         return (
             <div className="container">
-                <h1>Materias Obligatorias</h1>
-                <br/>
-                <table className="table table-hover">
-                    <thead>
-                        <tr>
-                        <th scope="col">Nombre</th>
-                        <th scope="col">Departamento</th>
-                        <th scope="col">Experimental</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {materias.map((materia, index) => {
-                            if (materia.obligatoria) {
-                                return (
-                                    <tr key={index}>
-                                        <td>{materia.nombre}</td>
-                                        <td>{materia.departamento}</td>
-                                        <td>{materia.experimental ? "Si" : "No"}</td>
-                                    </tr>
-                                )
-                            }
-                        })}
-                    </tbody>
-                    </table> 
+                <div className="row">
+                    <div className="col">
+                        <h1>Materias Obligatorias</h1>
+                        <br/>
+                        <table className="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Departamento</th>
+                                <th scope="col">Experimental</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {materias.map((materia, index) => {
+                                    if (materia.obligatoria) {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{materia.nombre}</td>
+                                                <td>{materia.departamento}</td>
+                                                <td>{materia.experimental ? "Si" : "No"}</td>
+                                            </tr>
+                                        )
+                                    }
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div className="col">
+                        <h1>Materias Optativas</h1>
+                        <br/>
+                        <table className="table table-hover">
+                            <thead>
+                                <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Departamento</th>
+                                <th scope="col">Experimental</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {materias.map((materia, index) => {
+                                    if (!materia.obligatoria) {
+                                        return (
+                                            <tr key={index}>
+                                                <td>{materia.nombre}</td>
+                                                <td>{materia.departamento}</td>
+                                                <td>{materia.experimental ? "Si" : "No"}</td>
+                                            </tr>
+                                        )
+                                    }
+                                })}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         )
     }
