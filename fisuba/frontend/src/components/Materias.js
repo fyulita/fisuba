@@ -12,7 +12,7 @@ export class Materias extends Component {
 
 
     fetchMaterias() {
-        fetch('http://localhost:8000/api/materias')
+        fetch('api/materias')
         .then(response => response.json())
         .then(data => this.setState({
             materiasList: data
