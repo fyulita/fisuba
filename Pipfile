@@ -12,11 +12,11 @@ django-rest-knox = "*"
 psycopg2 = "*"
 pylint = "*"
 autopep8 = "*"
+whitenoise = "*"
 psycopg2-binary = "*"
 dj-database-url = "*"
 gunicorn = "*"
 django-heroku = "*"
-whitenoise = "*"
 
 [requires]
 python_version = "3.8"
