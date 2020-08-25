@@ -1,1 +1,1 @@
-web: gunicorn fisuba.wsgi
+web: cd fisuba && gunicorn fisuba.wsgi
