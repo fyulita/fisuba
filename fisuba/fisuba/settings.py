@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'fisuba.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'CORE',
+        'NAME': 'fisuba',
         'USER': 'postgres',
         'PASSWORD': 'oz5LBN2cKVFem^ZbFIal',
         'HOST': 'localhost',
@@ -134,8 +134,3 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
-
-
-# Always open as HTTPS // False when in development and True when in production
-SECURE_SSL_REDIRECT = False
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')

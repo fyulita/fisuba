@@ -1,4 +1,4 @@
-# FISUBA
+# [FisUBA](fisuba.herokuapp.com)
 
 Página web con material de la carrera de Lic. en Ciencias Físicas de la Universidad de Buenos Aires. Esta página usa Django REST Framework en el backend para la API y usa React.js en el frontend.
 
@@ -28,7 +28,7 @@ pipenv install
 - PORT: 5432
 - USER: postgres
 - PASSWORD: oz5LBN2cKVFem^ZbFIal
-- DATABASE NAME: CORE
+- DATABASE NAME: fisuba
 
 4. Migramos los modelos a la base de datos:
 
