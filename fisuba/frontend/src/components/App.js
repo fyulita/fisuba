@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './Home';
 import About from './About';
+import Materia from './Materia';
 
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
                 <div>
                     <Route exact path='/' component={Home} />
                     <Route exact path='/about' component={About} />
+                    <Route path='/materia/:id' component={Materia} />
                 </div>
             </Router>
         )
