@@ -61,7 +61,7 @@ class Examenes(models.Model):
     ]
 
     materia = models.ForeignKey(Materias, on_delete=models.CASCADE)
-    TIPO = models.CharField(max_length=2, choices=TIPO_OPTIONS)
+    tipo = models.CharField(max_length=2, choices=TIPO_OPTIONS)
     anio = models.IntegerField(validators=[MinValueValidator(2010), MaxValueValidator(2050)])
     cuatrimestre = models.IntegerField(choices=CUATRIMESTRE_OPTIONS)
 
