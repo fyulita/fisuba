@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 import django_heroku
+from .secret_setings import SECRET_KEY, DB_PASSWORD
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -20,9 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '@p6us%6c!4-pxte98-ui&rqwdhsvm91ujq2wnl2z*wc+x+*c7%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -93,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'fisuba',
         'USER': 'postgres',
-        'PASSWORD': 'oz5LBN2cKVFem^ZbFIal',
+        'PASSWORD': DB_PASSWORD,
         'HOST': 'localhost',
         'PORT': '5432'
     }

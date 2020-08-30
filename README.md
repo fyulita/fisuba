@@ -24,22 +24,27 @@ pipenv shell
 pipenv install
 ```
 
-3. Creamos el servidor de PostgreSQL y la base de datos con la info correcta (Recomiendo usar pgAdmin4 ya que es más fácil):
+3. Crear un archivo de Python con los datos secretos. Usteden pueden elegirlos, los oficiales son secretos. Tienen que crear un archivo llamado
+`secret_settings.py` en junto con `settings.py` en `fisuba/fisuba/` y definir dos variables: `SECRET_KEY` y `DB_PASSWORD`. `SECRET_KEY` debe ser
+una contraseña de 50 caracteres que la página va a usar para hacer requests y `DB_PASSWORD` debe ser una contraseña que van a usar para conectarse
+a la base de datos.
+
+4. Creamos el servidor de PostgreSQL y la base de datos con la info correcta (Recomiendo usar pgAdmin4 ya que es más fácil):
 
 - HOST: localhost
 - PORT: 5432
 - USER: postgres
-- PASSWORD: oz5LBN2cKVFem^ZbFIal
+- PASSWORD: *La contraseña que hayan elegido en el paso anterior*
 - DATABASE NAME: fisuba
 
-4. Migramos los modelos a la base de datos:
+5. Migramos los modelos a la base de datos:
 
 ```
 cd fisuba
 python manage.py migrate
 ```
 
-5. Corremos la página. Asegurarse de tener los puertos 8000 (para la página) y 5432 (para la base de datos) disponibles:
+6. Corremos la página. Asegurarse de tener los puertos 8000 (para la página) y 5432 (para la base de datos) disponibles:
 
 ```
 python manage.py runserver

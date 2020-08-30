@@ -1,3 +1,6 @@
 .vscode
 scraps
 node_modules
+**/__pycache__
+
+fisuba/fisuba/secret_settings.py
