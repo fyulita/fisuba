@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 import django_heroku
-from .secret_setings import SECRET_KEY, DB_PASSWORD
+from .secret_settings import SECRET_KEY, DB_PASSWORD
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
